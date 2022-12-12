@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 여러가지 mapper들이 있을 수 잇기 때문에 namespace에 어떤 mapper인지 설정 내가 사용할 mapper의 경로를 namespace에 지정 -->
+<mapper namespace="kr.cctv.Mapper.cctvMapper">
+  
+  <insert id="empJoin" parameterType="kr.cctv.entity.Employee">
+      insert into employee(emp_no, emp_name, emp_pw, emp_phone)
+      values(#{emp_no},#{emp_name},#{emp_pw},#{emp_phone})     
+  </insert>  
+  
+  <select id="empList" resultType="kr.cctv.entity.Employee">
+    select * from employee order by emp_no
+  </select>
+  
+    <select id="empLogin" parameterType="kr.cctv.entity.Employee" resultType="kr.cctv.entity.Employee">
+      select * from employee where emp_no=#{emp_no} and emp_pw=#{emp_pw}
+  </select>
+  <update id="empUpdate" parameterType="kr.cctv.entity.Employee" >
+      update employee set 
+      emp_no=#{emp_no}, emp_pw=#{emp_pw}, emp_name=#{emp_name}, emp_phone=#{emp_phone} 
+      where emp_no=#{emp_no}
+  </update>
+    <delete id="empDelete" parameterType="int">
+      delete from employee where emp_no=#{emp_no}
+  </delete>
+  <select id="empSelect" parameterType="int" resultType="kr.cctv.entity.Employee">
+    select * from employee where emp_no=#{emp_no}    
+  </select>
+  <select id="notiList" resultType="kr.cctv.entity.Notification">
+    select * from notification order by noti_no desc
+  </select>
+  
+  <select id="cctvContent" parameterType="int" resultType="kr.cctv.entity.Notification">
+      select * from notification where noti_no=#{noti_no}  
+  </select>
+  
+  <select id="Notification" resultType="kr.cctv.entity.Notification" parameterType="kr.cctv.entity.Paging">
+      select * from notification order by noti_time desc limit #{firstRow}, #{rowSizePerPage}
+  </select> 
+  <delete id="notiDelete" parameterType="int">
+      delete from notification where noti_no=#{noti_no}
+  </delete>
+  <select id="getTotalRowCount2" parameterType="kr.cctv.entity.Paging" resultType="int">
+      select count(*) from notification
+  </select>
+  <select id="searchNoti" resultType="kr.cctv.entity.Notification" parameterType="kr.cctv.entity.Paging2">
+      select * from notification 
+      where noti_name like concat('%',#{input},'%') or noti_time like concat('%',#{input},'%')
+      order by noti_time desc       
+      limit #{firstRow}, #{rowSizePerPage}
+  </select>  
+  <select id="getTotalRowCount3" parameterType="kr.cctv.entity.Paging2" resultType="int">
+      select count(*) from notification 
+      where noti_name like concat('%',#{input},'%') or noti_time like concat('%',#{input},'%')
+  </select>  
+  
+  
+</mapper>

@@ -1,0 +1,89 @@
+#bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  background-color: aliceblue;
+  float: left;
+  text-align: center;
+}
+#bar li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+#bar li a.active {
+  background-color: navy;
+  color: white;
+}
+
+#bar li a:hover:not(.active) {
+  background-color: skyblue;
+  color: white;
+}
+#community #board {
+  position: relative;
+  margin-left: 15%;
+}
+
+#community #board table {
+  width: 70%;
+  max-width: 1080px;
+  margin: 0px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  #community #board table {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 728px) {
+  #community #board table {
+    padding: 0 48px;
+  }
+}
+#board th td {
+  border: 1px solid #444444;
+  padding: 5px;
+  margin: auto;
+}
+
+#board td {
+  border: 1px solid #444444;
+  padding: 10px;
+  margin: auto;
+}
+
+#board #number {
+  width: 15%;
+}
+
+#board #name {
+  width: 20%;
+}
+
+#board #s-num {
+  width: 20%;
+}
+
+#board #date {
+  width: 20%;
+}
+
+#board #admi {
+  width: 25%;
+}
+
+#community hr {
+  margin-left: 5%;
+  margin-bottom: 30px;
+}
+
+#community {
+  margin-left: 10%;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 여러가지 mapper들이 있을 수 잇기 때문에 namespace에 어떤 mapper인지 설정 내가 사용할 mapper의 경로를 namespace에 지정 -->
+<mapper namespace="kr.cctv.Mapper.BoardMapper">
+  <select id="boardList" resultType="kr.cctv.entity.Board" parameterType="kr.cctv.entity.Paging">
+    select * from board order by bo_no desc limit #{firstRow}, #{rowSizePerPage}
+  </select>
+  <select id="getTotalRowCount" parameterType="kr.cctv.entity.Paging" resultType="int">
+      select count(*) from board
+  </select>
+  
+  <insert id="boardInsert" parameterType="kr.cctv.entity.Board">
+      insert into board(bo_title,bo_type,bo_content,emp_no)
+      values(#{bo_title},#{bo_type},#{bo_content},#{emp_no})
+      
+  </insert>
+  <select id="boardContent" parameterType="int" resultType="kr.cctv.entity.Board">
+      select * from board where bo_no=#{bo_no}
+  </select>
+  <update id="boardUpdate" parameterType="kr.cctv.entity.Board" >
+      update board set bo_title=#{bo_title}, bo_content=#{bo_content} where bo_no=#{bo_no}
+  </update>
+  <delete id="boardDelete" parameterType="int">
+      delete from board where bo_no=#{bo_no}
+  </delete>
+  
+</mapper>

@@ -1,0 +1,71 @@
+:root {
+    --header-height: 20vh;
+}
+
+.header {
+    display: flex;
+    background-color: #151E6F;
+    height: var(--header-height);
+    padding: 0.5rem 2rem;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.header .logo {
+    display: flex;
+    color: white;
+    margin: auto 0;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+    width: 440px;
+    justify-content: space-between;
+}
+
+.header .nav-item {
+    color: white;
+    display: flex;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+
+.header .nav-item.active {
+    background: white;
+    color: #151E6F;
+    border-radius: 5px;
+}
+
+
+.main-section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--header-height));
+}
+
+.main-section .main-container {
+    background-color: #F1F3FA;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10rem 5rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.radio-group div+div {
+    margin: 0.5rem 0;
+}
