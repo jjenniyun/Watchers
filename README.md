@@ -1,4 +1,4 @@
-# #512BD4Watchers
+# Watchers
 
 ## 주제: 딥러닝을 활용한 CCTV 영상 분석 기반의 아동 모니터링 서비스
 
