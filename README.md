@@ -1,6 +1,6 @@
 # Watchers
 
-## <img src="https://img.shields.io/badge/이름-#512BD4?style=flat-square"/>주제: 딥러닝을 활용한 CCTV 영상 분석 기반의 아동 모니터링 서비스
+<img src="https://img.shields.io/badge/이름-#512BD4?style=flat-square"/>주제: 딥러닝을 활용한 CCTV 영상 분석 기반의 아동 모니터링 서비스
 
 ### 1.프로젝트 소개 및 기능 소개
    ### - 딥러닝을 활용하여 학습시킨 모델을 실시간 CCTV 영상에 적용시켜 사용자에게 폭행 검출, 입·출입 관리 서비스를 제공합니다.
