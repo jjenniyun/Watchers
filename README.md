@@ -11,10 +11,10 @@
 
 ### 2. <내 역할>
 
-   #### - Spring 웹 페이지 기능 구현(Paging과 검색 기능)
-   #### - Flask 활용하여 딥러닝으로 학습한 폭행 감지, 입·출입 관리 모델(AI 모델)을 Spring과 연동하여 실시간 영상 띄우기
+   #### 1) Spring 웹 페이지 기능 구현(Paging과 검색 기능)
+   #### 2) Flask 활용하여 딥러닝으로 학습한 폭행 감지, 입·출입 관리 모델(AI 모델)을 Spring과 연동하여 실시간 영상 띄우기
        - Flask : Python Opencv 화면 구현
        - Spring : JSP 페이지 연동
-   #### - 웹 서버 기능 연동
+   #### 3) 웹 서버 기능 연동
        - Spring Framework을 활용한 웹 서버 기능 연동
        - MyBATIS를 활용한 MySQL DB 연동
