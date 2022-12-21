@@ -8,8 +8,8 @@
       - 커뮤니티 제공으로 근무자, 관리자 간의 소통이 가능합니다.<br>
       - 관리자 페이지로 근무자들을 관리하며 수정, 삭제 등을 할 수 있습니다.<br>
       - Spring Framework로 웹 페이지를 구성하였고 Python을 활용하여 AI Hub, kaggle의 Datasets을 학습시켰습니다. OpenCV를 활용하여 실시간 영상을 구현했고 Javascript, Bootstrap 활용하여 시각화하였습니다.<br>
-<br>
-### 2. <내 역할>
+      
+2. <내 역할>
    1) Spring 웹 페이지 기능 구현(Paging과 검색 기능)
    2) Flask 활용하여 딥러닝으로 학습한 폭행 감지, 입·출입 관리 모델(AI 모델)을 Spring과 연동하여 실시간 영상 띄우기
       - Flask : Python Opencv 화면 구현
